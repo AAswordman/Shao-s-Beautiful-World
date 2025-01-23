@@ -234,7 +234,7 @@ public class UIManager implements StepAble {
 		canvas.setPosition(standardLong * 2, standardLong * 2);
 		canvas.setSize(standardLong * 16, standardLong * 16);
 
-		//stage.addActor(canvas);
+//		stage.addActor(canvas);
 
 		timeDelayer = new TimeDelayer(400);
 	}
@@ -317,7 +317,6 @@ public class UIManager implements StepAble {
 
 		// cam.position.y=(float)
 		// NoiseGenerate.noise.noise(cam.position.x*0.01,cam.position.z*0.01)*100+30;
-		// LOG.print("鎽勫儚鏈洪珮搴�",cam.position.y+"");
 	}
 
 	public UIManager(WorldManager worldManager) {

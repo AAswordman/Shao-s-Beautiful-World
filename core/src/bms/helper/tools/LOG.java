@@ -1,5 +1,4 @@
 package bms.helper.tools;
-import android.util.Log;
 import bms.helper.io.CreateFile;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

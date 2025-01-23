@@ -2,7 +2,6 @@ package bms.helper.zip;
 /**
  * Created by YuShuangPing on 2018/11/11.
  */
-import android.util.Log;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -42,10 +41,8 @@ public class ZipUtils {
                 File folder = new File(outPathString + File.separator + szName);
                 folder.mkdirs();
             } else {
-                Log.e(TAG, outPathString + File.separator + szName);
                 File file = new File(outPathString + File.separator + szName);
                 if (!file.exists()) {
-                    Log.e(TAG, "Create the file:" + outPathString + File.separator + szName);
                     file.getParentFile().mkdirs();
                     file.createNewFile();
                 }
@@ -76,10 +73,8 @@ public class ZipUtils {
                 File folder = new File(outPathString + File.separator + szName);
                 folder.mkdirs();
             } else {
-                Log.e(TAG, outPathString + File.separator + szName);
                 File file = new File(outPathString + File.separator + szName);
                 if (!file.exists()) {
-                    Log.e(TAG, "Create the file:" + outPathString + File.separator + szName);
                     file.getParentFile().mkdirs();
                     file.createNewFile();
                 }

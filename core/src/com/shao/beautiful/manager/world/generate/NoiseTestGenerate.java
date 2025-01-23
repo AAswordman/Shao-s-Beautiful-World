@@ -4,6 +4,7 @@ import com.mithrilmania.blocktopograph.util.Noise;
 import com.shao.beautiful.config.GameConfig;
 import com.shao.beautiful.gameObj.Block.BlockTexture;
 import com.shao.beautiful.manager.world.Chunk;
+import com.shao.beautiful.manager.world.DataSaver;
 import com.shao.beautiful.manager.world.MapLoader;
 import com.shao.beautiful.manager.world.generate.boimes.BoimeData;
 import com.shao.beautiful.manager.world.generate.boimes.NoiseUtil;
@@ -15,7 +16,7 @@ public class NoiseTestGenerate implements TerrainGenerate {
 	private WorldBoime boime;
 
 	@Override
-	public Chunk getChunk(int chunkX, int chunkY, int chunkZ) {
+	public Chunk getChunk(DataSaver dataSaver, int chunkX, int chunkY, int chunkZ) {
 		 
 		Chunk c = new Chunk(loader.worldManager.saver, new byte[Chunk.width * Chunk.width * Chunk.width], chunkX,
 				chunkY, chunkZ);

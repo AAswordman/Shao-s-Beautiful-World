@@ -36,7 +36,7 @@ public class BlockNature {
 		addCanPass(BlockTexture.VOID);
 
 		addCanRenderBlock(BlockTexture.AIR);
-		addCanRenderBlock(BlockTexture.WATER);
+//		addCanRenderBlock(BlockTexture.WATER);
 
 		addCannotBeRender(BlockTexture.AIR);
 		addCannotBeRender(BlockTexture.NULL);

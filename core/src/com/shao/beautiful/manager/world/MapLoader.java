@@ -20,7 +20,7 @@ public class MapLoader {
 
 	public MapLoader(WorldManager worldManager) {
 		this.worldManager = worldManager;
-		this.generate = new NoiseTestGenerate(this);
+		this.generate = new NoiseGenerate(this);
 	}
 
 	public void destroy() {
@@ -60,7 +60,7 @@ public class MapLoader {
 		}
 		Chunk c;
 	
-		worldManager.saver.putChunk(chunkX, chunkY, chunkZ, (c = generate.getChunk(chunkX, chunkY, chunkZ)));
+		worldManager.saver.putChunk(chunkX, chunkY, chunkZ, (c = generate.getChunk(worldManager.saver,chunkX, chunkY, chunkZ)));
 		return c;
 	}
 

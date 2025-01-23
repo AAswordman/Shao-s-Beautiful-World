@@ -1,5 +1,6 @@
 package com.shao.beautiful.manager.world.generate;
 import com.shao.beautiful.manager.world.Chunk;
+import com.shao.beautiful.manager.world.DataSaver;
 import com.shao.beautiful.manager.world.MapLoader;
 import com.shao.beautiful.gameObj.Block;
 
@@ -9,9 +10,9 @@ public class FlatGenerate implements TerrainGenerate {
         this.loader = loader;
     }
     @Override
-    public Chunk getChunk(int chunkX, int chunkY, int chunkZ) {
+    public Chunk getChunk(DataSaver dataSaver, int chunkX, int chunkY, int chunkZ) {
 
-        Chunk c=new Chunk(new byte[Chunk.width * Chunk.width * Chunk.width]);
+        Chunk c=new Chunk(dataSaver,new byte[Chunk.width * Chunk.width * Chunk.width],chunkX,chunkY,chunkZ);
         if (chunkY == 0) {
             for (int x=0;x < Chunk.width;x++) {
                 for (int z=0;z < Chunk.width;z++) {
